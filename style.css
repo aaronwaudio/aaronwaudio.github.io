@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+	background-color: #ddd;
+}
+
+div.main {
+	width: 90%;
+	margin-top: 30px;
+}
+
+div.main div.page-header h1 {
+	font-family: josefin sans, arial;
+	color: #555;
+	font-weight: bold;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+div.instructions {
+	width: 80%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.instructions p {
+	font-family: josefin sans, arial;
+	color: #555;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+div.calc-header h2 {
+	font-family: josefin sans, arial;
+	font-size: 35px;
+	color: #555;
+	font-weight: bold;
+}
+
+div.main div.high-tier {
+	width: 45%;
+	margin-right: 10%;
+}
+
+div.main div.low-tier {
+	width: 45%;
+}
+
+input[type=tel] {
+	font-family: josefin sans, arial;
+	font-weight: bold;
+	color: #555;
+	margin: 2px;
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid #bbb;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #ddd;
+}
+
+div.button-div {
+	width: 82px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button {
+	font-family: josefin sans;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 2px;
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid #bbb;
+	color: #555;
+	width: 80px;
+	box-sizing: border-box;
+	background-color: #fff;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ddd;
+}
+
+div.answer {
+	white-space: nowrap;
+	border: 0;
+	outline 0;
+	border-bottom: solid 2px #bbb;
+}
+
+div.answer h3 {
+	font-family: josefin sans, arial;
+	color: #555;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#answer {
+	font-family: josefin sans, arial;
+	color: #555;
+	font-weight: bold;
+}
+
+#high-answer {
+	font-family: josefin sans, arial;
+	color: #555;
+	font-weight: bold;
+}
+
+div.donate-button {
+	width: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	margin-top: 300px;
+}
+
+div.donate-button input {
+	width: 100%;
+}
+
+input:focus {
+	outline: none;
+}
