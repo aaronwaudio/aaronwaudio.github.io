@@ -14,15 +14,15 @@
 		</div>
 		<div class="instructions text-justify">
 			<p>
-				Thanks for using my Transmutation Calculator! If you are looking to maximize your crafting potential, this tool is incredibly useful. I have found it is best to start with your highest transmutable resource first, since the change in amounts will trickle down and affect every other transmutation. You can use the calculator on the left first for each tier you need to transmute except for the T2-T3 calculation. Use the calculator on the right for that. That should give you exaclty what you need for the maximum amount of resources. Enjoy! Feel free to donate to help pay for domain and hosting charges so I can keep this site up and running!
+				Thanks for using my Transmutation Calculator! If you are looking to maximize your crafting potential, this tool is incredibly useful. Enter the amount of each tier of resource you have, and it will tell you how many to transmute so you are just transmuting the extras. I have found it is best to start with your highest transmutable resource first, since the change in amounts will trickle down and affect every other transmutation. You can use the calculator on the left first for each tier you need to transmute except for the T2-T3 calculation. Use the calculator on the right for that. That should give you exaclty what you need for the maximum amount of resources. Enjoy! Feel free to donate to help pay for domain and hosting charges so I can keep this site up and running!
 			</p>
 		</div>
 		<div class="high-tier float-left">
 			<div class="calc-header text-center">
 				<h2>T3-T4 or Higher</h2>
 			</div>
-			<input type="tel" id="low-tier" />
-			<input type="tel" id="high-tier" />
+			<input type="tel" id="low-tier" placeholder="Lower Tier Amount" />
+			<input type="tel" id="high-tier" placeholder="Higher Tier Amount" />
 			<div class="button-div">
 				<button id="low-button" onclick="highTierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
 			</div>
@@ -35,8 +35,8 @@
 			<div class="calc-header text-center">
 				<h2>T2-T3</h2>
 			</div>
-			<input type="tel" id="less-tier" />
-			<input type="tel" id="more-tier" />
+			<input type="tel" id="less-tier" placeholder="Tier 2 Amount" />
+			<input type="tel" id="more-tier" placeholder="Tier 3 Amount" />
 			<div class="button-div">
 				<button id="low-button" onclick="lowTierCalc(document.getElementById('less-tier').value, document.getElementById('more-tier').value)">Submit</button>
 			</div>
