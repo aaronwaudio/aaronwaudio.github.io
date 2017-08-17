@@ -14,39 +14,29 @@
 		</div>
 		<div class="instructions text-justify">
 			<p>
-				Thanks for using my Transmutation Calculator! If you are looking to maximize your crafting potential, this tool is incredibly useful. Enter the amount of each tier of resource you have, and it will tell you how many to transmute so you are just transmuting the extras. I have found it is best to start with your highest transmutable resource first, since the change in amounts will trickle down and affect every other transmutation. You can use the calculator on the left first for each tier you need to transmute except for the T2-T3 calculation. Use the calculator on the right for that. That should give you exaclty what you need for the maximum amount of resources. Enjoy! Feel free to donate to help pay for domain and hosting charges so I can keep this site up and running!
+				Thanks for using my Transmutation Calculator! If you are looking to maximize your crafting potential, this tool is incredibly useful. Enter the amount of each tier of resource you have, and it will tell you how many to transmute so you are just transmuting the extras. I have found it is best to start with your highest transmutable resource first, since the change in amounts will trickle down and affect every other transmutation. You can use the dropdown menu to choose to transmute from tier 2 to tier 3, or any other higher tier transmutaion. That should give you exaclty what you need for the maximum amount of resources. Enjoy! Feel free to donate to help pay for domain and hosting charges so I can keep this site up and running!
 			</p>
 		</div>
-		<div class="high-tier float-left">
-			<div class="calc-header text-center">
-				<h2>T3-T4 or Higher</h2>
-			</div>
-			<input type="tel" id="low-tier" placeholder="Lower Tier Amount" />
-			<input type="tel" id="high-tier" placeholder="Higher Tier Amount" />
-			<div class="button-div">
-				<button id="low-button" onclick="highTierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
-			</div>
-			<br>
-			<div class="answer">
-				<h3>Amount: <span id="high-answer"></span></h3>
-			</div>
+		<div class="select-div text-center" class="block-center">
+			<select id="tier-select">
+				<option selected value="none">Select a Tier</option>
+				<option value="t2-t3">T2-T3</option>
+				<option value="t3-t4">T3-T4 or Higher</option>
+			</select>
 		</div>
-		<div class="low-tier float-left text-left">
-			<div class="calc-header text-center">
-				<h2>T2-T3</h2>
-			</div>
-			<input type="tel" id="less-tier" placeholder="Tier 2 Amount" />
-			<input type="tel" id="more-tier" placeholder="Tier 3 Amount" />
+		<div class="high-tier block-center">
+			<input type="tel" id="low-tier" class="block-center" placeholder="Lower Tier Amount" />
+			<input type="tel" id="high-tier" class="block-center" placeholder="Higher Tier Amount" />
 			<div class="button-div">
-				<button id="low-button" onclick="lowTierCalc(document.getElementById('less-tier').value, document.getElementById('more-tier').value)">Submit</button>
+				<button onclick="tierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
 			</div>
 			<br>
-			<div class="answer">
+			<div class="answer block-center">
 				<h3>Amount: <span id="answer"></span></h3>
 			</div>
 		</div>
 		<div class="donate-button">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHFgYJKoZIhvcNAQcEoIIHBzCCBwMCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYCgdPjNcWEdjsivj/TKcQKJqpue7rZ53pG1/iBGqyuWDb8CygEsz0Be5Er8t4bRr3z5JhhcyvJMRHJrlO1uj8l287FJ+aTmfqCN6G6TLd4eZuWV2Es4dcnOSDE+DAe5rItNb0aKc5rtIu3ElLvio2GSM6Fm+gZmbXSqTVBlnP6SwTELMAkGBSsOAwIaBQAwgZMGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQI+dfpxhtBghaAcJB66wHMPCydxcqppglfb2NscOpL4epgqMIzYt9TeE6XwcDIEzDaAHCa4EtjNiMBosVLMiLg/r1tqJKwbA8k1ELRr1qO+4+NAVHgDPKufaHz/+CYIAByavDlGru0qjrxovxdwbP80ff4HwxQaT196uOgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xNzA4MTYyMDQ3MzdaMCMGCSqGSIb3DQEJBDEWBBSf6QWlGV6sZJM+YfGB6KRP1kD4vDANBgkqhkiG9w0BAQEFAASBgL7+iPhclejiFyn/HMbEHBgHpwbal/9CYVpyZMxSrVUSCT2tV5nVMdJ6ONzQesY9+bWMI90KeysG8LY0L2iqYZejmzpB/Gw1vz1aC5HpfmQVcrEzjZCvArwa08Ec/u68DGgLjFWvs3Q0k3StIqOoc184Zhv8f13JWU0hTan8RikD-----END PKCS7-----">
 				<input type="image" src="donatebutton.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">

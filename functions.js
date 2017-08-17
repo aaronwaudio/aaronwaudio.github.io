@@ -1,20 +1,22 @@
-var lowSum = 0;
-var highSum = 0;
+var sum = 0;
 
-function lowTierCalc(t2, t3) {
-	lowSum = Math.round((parseInt(t2)-(parseInt(t3)/2))*(6/7)/3);
-	if (lowSum >= 0) {
-		document.getElementById('answer').innerHTML = lowSum;
+function tierCalc(t2, t3) {
+	var optionVal = document.getElementById('tier-select').value
+	if (optionVal == 'none') {
+		alert('Please select a valid tier option');
+	} else if (optionVal == 't2-t3') {
+		sum = Math.round((parseInt(t2)-(parseInt(t3)/2))*(6/7)/3);
+		if (sum >= 0) {
+			document.getElementById('answer').innerHTML = sum;
+		} else {
+			document.getElementById('answer').innerHTML = 0;
+		};
 	} else {
-		document.getElementById('answer').innerHTML = 0;
-	}
-};
-
-function highTierCalc(t4, t5) {
-	highSum = Math.round((parseInt(t4)-parseInt(t5))*(3/4)/3);
-	if (highSum >= 0) {
-		document.getElementById('high-answer').innerHTML = highSum;
-	} else {
-		document.getElementById('high-answer').innerHTML = 0;
+		sum = Math.round((parseInt(t2)-parseInt(t3))*(3/4)/3);
+		if (sum >= 0) {
+			document.getElementById('answer').innerHTML = sum;
+		} else {
+			document.getElementById('answer').innerHTML = 0;
+		};
 	};
 };

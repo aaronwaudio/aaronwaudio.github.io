@@ -18,7 +18,7 @@ div.main div.page-header h1 {
 }
 
 div.instructions {
-	width: 80%;
+	width: 70%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	margin-left: auto;
@@ -32,6 +32,29 @@ div.instructions p {
 	font-weight: bold;
 }
 
+div.select-div {
+	width: 50%;
+	height: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.select-div select {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30px;
+	font-family: josefin sans;
+	font-weight: bold;
+	color: #555;
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid #bbb;
+	background-color: #ddd;
+}
+
 div.calc-header h2 {
 	font-family: josefin sans, arial;
 	font-size: 35px;
@@ -40,19 +63,15 @@ div.calc-header h2 {
 }
 
 div.main div.high-tier {
-	width: 45%;
-	margin-right: 10%;
-}
-
-div.main div.low-tier {
-	width: 45%;
+	width: 25%;
 }
 
 input[type=tel] {
 	font-family: josefin sans, arial;
 	font-weight: bold;
 	color: #555;
-	margin: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 	border: 0;
 	outline: 0;
 	border-bottom: 2px solid #bbb;
@@ -92,6 +111,7 @@ div.answer {
 	border: 0;
 	outline 0;
 	border-bottom: solid 2px #bbb;
+	width: 40%;
 }
 
 div.answer h3 {
@@ -107,18 +127,12 @@ div.answer h3 {
 	font-weight: bold;
 }
 
-#high-answer {
-	font-family: josefin sans, arial;
-	color: #555;
-	font-weight: bold;
-}
-
 div.donate-button {
 	width: 10%;
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
-	margin-top: 300px;
+	margin-top: 75px;
 }
 
 div.donate-button input {
