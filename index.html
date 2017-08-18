@@ -5,6 +5,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="master.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="functions.js"></script>
 </head>
 <body>
@@ -21,14 +22,18 @@
 			<select id="tier-select">
 				<option selected value="none">Select a Tier</option>
 				<option value="t2-t3">T2-T3</option>
-				<option value="t3-t4">T3-T4 or Higher</option>
+				<option value="t3-t4">T3-T4</option>
+				<option value="t4-t5">T4-T5</option>
+				<option value="t5-t6">T5-T6</option>
+				<option value="t6-t7">T6-T7</option>
+				<option value="t7-t8">T7-T8</option>
 			</select>
 		</div>
 		<div class="high-tier block-center">
 			<input type="tel" id="low-tier" class="block-center" placeholder="Lower Tier Amount" />
 			<input type="tel" id="high-tier" class="block-center" placeholder="Higher Tier Amount" />
 			<div class="button-div">
-				<button onclick="tierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
+				<button id="submit" onclick="tierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
 			</div>
 			<br>
 			<div class="answer block-center">
