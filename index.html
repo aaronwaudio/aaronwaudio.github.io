@@ -4,49 +4,69 @@
 	<title>Transmutation Calculator</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="master.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="functions.js"></script>
 </head>
 <body>
-	<div class="main block-center">
-		<div class="page-header text-center">
-			<h1>Albion Online Resource Transmutation Calculator</h1>
-		</div>
-		<div class="instructions text-justify">
-			<p>
-				Thanks for using my Transmutation Calculator! If you are looking to maximize your crafting potential, this tool is incredibly useful. Enter the amount of each tier of resource you have, and it will tell you how many to transmute so you are just transmuting the extras. You will have to run this several times to get all your resources into equilibrium. You can use the dropdown menu to choose which tiers you are transmuting. The amount field at the bottom tells you how many of the higher tier resources you should craft. That should give you exactly what you need for the maximum amount of resources. Enjoy! Feel free to donate to help pay for domain and hosting charges so I can keep this site up and running!
-			</p>
-		</div>
-		<div class="select-div text-center" class="block-center">
-			<select id="tier-select">
-				<option selected value="none">Select a Tier</option>
-				<option value="t2-t3">T2-T3</option>
-				<option value="t3-t4">T3-T4</option>
-				<option value="t4-t5">T4-T5</option>
-				<option value="t5-t6">T5-T6</option>
-				<option value="t6-t7">T6-T7</option>
-				<option value="t7-t8">T7-T8</option>
-			</select>
-		</div>
-		<div class="high-tier block-center">
-			<input type="tel" id="low-tier" class="block-center" placeholder="Lower Tier Amount" />
-			<input type="tel" id="high-tier" class="block-center" placeholder="Higher Tier Amount" />
-			<div class="button-div">
-				<button id="submit" onclick="tierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-xs col-sm col-md-10 page-header text-center">
+				<h1>Albion Online<br>Resource Transmutation Calculator</h1>
 			</div>
-			<br>
-			<div class="answer block-center">
-				<h3>Amount: <span id="answer"></span></h3>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-xs-6 col-sm-4 col-md-2 instructions-btn">
+				<a class="btn btn-secondary" data-toggle="collapse" href="#instructions" aria-expanded="false" aria-controls="collapseExample">
+					Instructions
+				</a>
+			</div>
+		</div>
+		<div class="row justify-content-md-center text-justify">
+			<div id="instructions" class="collapse instructions col-xs col-sm col-md-10">
+				<p>
+					Thanks for using my Transmutation Calculator! If you are looking to maximize your crafting potential, this tool is incredibly useful. Enter the amount of each tier of resource you have, and it will tell you how many to transmute so you are just transmuting the extras. You will have to run this several times to get all your resources into equilibrium. You can use the dropdown menu to choose which tiers you are transmuting. The amount field at the bottom tells you how many of the higher tier resources you should craft. That should give you exactly what you need for the maximum amount of resources. Enjoy! Feel free to donate to help pay for domain and hosting charges so I can keep this site up and running!
+				</p>
+			</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="select-div text-center" class="col-xs col-sm col-md-4">
+				<select id="tier-select">
+					<option selected value="none">Select a Tier</option>
+					<option value="t2-t3">T2-T3</option>
+					<option value="t3-t4">T3-T4</option>
+					<option value="t4-t5">T4-T5</option>
+					<option value="t5-t6">T5-T6</option>
+					<option value="t6-t7">T6-T7</option>
+					<option value="t7-t8">T7-T8</option>
+				</select>
+			</div>
+		</div>
+		<div class="row justify-content-sm-center">
+			<div class="high-tier col-xs col-sm-8 col-md-4">
+				<input type="tel" id="low-tier" class="" placeholder="Lower Tier Amount" />
+				<input type="tel" id="high-tier" class="" placeholder="Higher Tier Amount" />
+				<div class="button-div">
+					<button id="submit" onclick="tierCalc(document.getElementById('low-tier').value, document.getElementById('high-tier').value)">Submit</button>
+				</div>
+				<br>
+				<div class="answer ">
+					<h3>Amount: <span id="answer"></span></h3>
+				</div>
 			</div>
 		</div>
 		<div class="donate-button">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-				<input type="image" src="donatebutton.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-				<img alt="" border="0" src="donatebutton.png" width="1" height="1">
-			</form>
+			<div class="row justify-content-center">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="col-xs-6 col-sm-4 col-md-2">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+					<input type="image" src="donatebutton.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="donatebutton.png" width="1" height="1">
+				</form>
+			</div>
 		</div>
 	</div>
 </body>

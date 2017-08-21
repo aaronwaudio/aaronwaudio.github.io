@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500i');
+
+html, body {
+	height: 100%;
+}
 
 body {
+	background-color: #555;
+}
+
+.container {
 	background-color: #fff;
+	min-height: 100%;
+	box-shadow: 0 0 30px black;
 }
 
 div.main {
@@ -9,9 +19,9 @@ div.main {
 	margin-top: 30px;
 }
 
-div.main div.page-header h1 {
-	font-family: josefin sans, arial;
-	color: #00004d;
+div.page-header h1 {
+	font-family: alegreya sans sc, arial;
+	color: #555;
 	font-weight: bold;
 	font-size: 50px;
 	margin-bottom: 30px;
@@ -25,9 +35,26 @@ div.instructions {
 	margin-right: auto;
 }
 
+.instructions-btn {
+	text-align: center;
+}
+
+.instructions-btn a {
+	background-color: #fff;
+	text-decoration: none;
+	border: 1px solid #555;
+	color: #555;
+	font-family: alegreya sans sc, arial;
+}
+
+.instructions-btn a:hover {
+	background-color: #555;
+	border: 1px solid #fff;
+}
+
 div.instructions p {
-	font-family: josefin sans, arial;
-	color: #00004d;
+	font-family: alegreya sans sc, arial;
+	color: #555;
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -46,13 +73,13 @@ div.select-div select {
 	margin-left: auto;
 	margin-right: auto;
 	height: 30px;
-	font-family: josefin sans;
+	font-family: alegreya sans sc;
 	font-weight: bold;
-	color: #00004d;
+	color: #555;
 	border: 0;
 	outline: 0;
-	border-bottom: 2px solid #bbb;
-	background-color: #ddd;
+	border-bottom: 2px solid #555;
+	background-color: #fff;
 	overflow: hidden; 
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -60,9 +87,9 @@ div.select-div select {
 }
 
 div.calc-header h2 {
-	font-family: josefin sans, arial;
+	font-family: alegreya sans sc, arial;
 	font-size: 35px;
-	color: #00004d;
+	color: #555;
 	font-weight: bold;
 }
 
@@ -71,18 +98,18 @@ div.main div.high-tier {
 }
 
 input[type=tel] {
-	font-family: josefin sans, arial;
+	font-family: alegreya sans sc, arial;
 	font-weight: bold;
-	color: #00004d;
+	color: #555;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	border: 0;
 	outline: 0;
-	border-bottom: 2px solid #bbb;
+	border-bottom: 2px solid #555;
 	width: 100%;
 	box-sizing: border-box;
 	text-align: center;
-	background-color: #ddd;
+	background-color: #fff;
 }
 
 div.button-div {
@@ -93,48 +120,45 @@ div.button-div {
 }
 
 button {
-	font-family: josefin sans;
+	font-family: alegreya sans sc;
 	font-weight: bold;
 	font-size: 20px;
 	margin: 2px;
 	border: 0;
 	outline: 0;
-	border-bottom: 2px solid #bbb;
-	color: #00004d;
+	border-bottom: 2px solid #555;
+	color: #555;
 	width: 80px;
 	box-sizing: border-box;
 	background-color: #fff;
 	float: left;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #ddd;
+	background-color: #fff;
 }
 
 div.answer {
 	white-space: nowrap;
 	border: 0;
 	outline 0;
-	border-bottom: solid 2px #bbb;
+	border-bottom: solid 2px #555;
 	width: 40%;
 }
 
 div.answer h3 {
-	font-family: josefin sans, arial;
-	color: #00004d;
+	font-family: alegreya sans sc, arial;
+	color: #555;
 	font-weight: bold;
 	font-size: 20px;
 }
 
 #answer {
-	font-family: josefin sans, arial;
-	color: #00004d;
+	font-family: alegreya sans sc, arial;
+	color: #555;
 	font-weight: bold;
 }
 
 div.donate-button {
-	width: 10%;
-	margin-left: auto;
-	margin-right: auto;
 	border: none;
 	margin-top: 50px;
 }
