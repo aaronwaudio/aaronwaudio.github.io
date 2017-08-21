@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 body {
-	background-color: #ddd;
+	background-color: #fff;
 }
 
 div.main {
@@ -11,7 +11,7 @@ div.main {
 
 div.main div.page-header h1 {
 	font-family: josefin sans, arial;
-	color: #555;
+	color: #00004d;
 	font-weight: bold;
 	font-size: 50px;
 	margin-bottom: 30px;
@@ -27,7 +27,7 @@ div.instructions {
 
 div.instructions p {
 	font-family: josefin sans, arial;
-	color: #555;
+	color: #00004d;
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -48,7 +48,7 @@ div.select-div select {
 	height: 30px;
 	font-family: josefin sans;
 	font-weight: bold;
-	color: #555;
+	color: #00004d;
 	border: 0;
 	outline: 0;
 	border-bottom: 2px solid #bbb;
@@ -62,7 +62,7 @@ div.select-div select {
 div.calc-header h2 {
 	font-family: josefin sans, arial;
 	font-size: 35px;
-	color: #555;
+	color: #00004d;
 	font-weight: bold;
 }
 
@@ -73,7 +73,7 @@ div.main div.high-tier {
 input[type=tel] {
 	font-family: josefin sans, arial;
 	font-weight: bold;
-	color: #555;
+	color: #00004d;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	border: 0;
@@ -100,7 +100,7 @@ button {
 	border: 0;
 	outline: 0;
 	border-bottom: 2px solid #bbb;
-	color: #555;
+	color: #00004d;
 	width: 80px;
 	box-sizing: border-box;
 	background-color: #fff;
@@ -120,14 +120,14 @@ div.answer {
 
 div.answer h3 {
 	font-family: josefin sans, arial;
-	color: #555;
+	color: #00004d;
 	font-weight: bold;
 	font-size: 20px;
 }
 
 #answer {
 	font-family: josefin sans, arial;
-	color: #555;
+	color: #00004d;
 	font-weight: bold;
 }
 
