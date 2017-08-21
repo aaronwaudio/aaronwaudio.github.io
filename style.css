@@ -137,6 +137,10 @@ button {
 	background-color: #fff;
 }
 
+button:focus {
+	outline: none;
+}
+
 div.answer {
 	white-space: nowrap;
 	border: 0;
