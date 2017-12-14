@@ -44,7 +44,7 @@ function tierCalc(t2, t3) {
 	};
 };
 
-$("#high-tier").keyup(function(event){
+$("#high-tier").on("keyup", function(event){
 	if(event.keyCode == 13){
 		$("#submit").click();
 	}
